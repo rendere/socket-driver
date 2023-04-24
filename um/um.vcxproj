@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{89bf3b6e-db0a-4121-9eca-6bcb93da9257}</ProjectGuid>
+    <RootNamespace>External</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>deps\phnt\;deps\;deps\LinuxPE\includes\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>deps\phnt\;deps\;deps\LinuxPE\includes\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <UACExecutionLevel>HighestAvailable</UACExecutionLevel>
+      <UACUIAccess>false</UACUIAccess>
+      <AdditionalDependencies>Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <UACExecutionLevel>HighestAvailable</UACExecutionLevel>
+      <UACUIAccess>false</UACUIAccess>
+      <AdditionalDependencies>Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="core\entry.cpp" />
+    <ClCompile Include="utils\driver.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common.h" />
+    <ClInclude Include="deps\LinuxPE\includes\coff\archive.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\coff\auxiliaries\aux_file_name.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\coff\auxiliaries\aux_function.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\coff\auxiliaries\aux_function_delimiter.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\coff\auxiliaries\aux_section.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\coff\auxiliaries\aux_weak_external.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\coff\file_header.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\coff\image.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\coff\import_library.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\coff\line_number.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\coff\reloc.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\coff\section_header.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\coff\string.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\coff\symbol.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\coff\uleb128.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\img_common.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\nt\data_directories.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\nt\directories\dir_debug.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\nt\directories\dir_delay_load.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\nt\directories\dir_exceptions.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\nt\directories\dir_export.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\nt\directories\dir_iat.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\nt\directories\dir_import.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\nt\directories\dir_load_config.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\nt\directories\dir_relocs.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\nt\directories\dir_resource.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\nt\directories\dir_security.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\nt\directories\dir_tls.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\nt\image.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\nt\nt_headers.hpp" />
+    <ClInclude Include="deps\LinuxPE\includes\nt\optional_header.hpp" />
+    <ClInclude Include="deps\phnt\ntd3dkmt.h" />
+    <ClInclude Include="deps\phnt\ntdbg.h" />
+    <ClInclude Include="deps\phnt\ntexapi.h" />
+    <ClInclude Include="deps\phnt\ntgdi.h" />
+    <ClInclude Include="deps\phnt\ntioapi.h" />
+    <ClInclude Include="deps\phnt\ntkeapi.h" />
+    <ClInclude Include="deps\phnt\ntldr.h" />
+    <ClInclude Include="deps\phnt\ntlpcapi.h" />
+    <ClInclude Include="deps\phnt\ntmisc.h" />
+    <ClInclude Include="deps\phnt\ntmmapi.h" />
+    <ClInclude Include="deps\phnt\ntnls.h" />
+    <ClInclude Include="deps\phnt\ntobapi.h" />
+    <ClInclude Include="deps\phnt\ntpebteb.h" />
+    <ClInclude Include="deps\phnt\ntpfapi.h" />
+    <ClInclude Include="deps\phnt\ntpnpapi.h" />
+    <ClInclude Include="deps\phnt\ntpoapi.h" />
+    <ClInclude Include="deps\phnt\ntpsapi.h" />
+    <ClInclude Include="deps\phnt\ntregapi.h" />
+    <ClInclude Include="deps\phnt\ntrtl.h" />
+    <ClInclude Include="deps\phnt\ntsam.h" />
+    <ClInclude Include="deps\phnt\ntseapi.h" />
+    <ClInclude Include="deps\phnt\ntsmss.h" />
+    <ClInclude Include="deps\phnt\nttmapi.h" />
+    <ClInclude Include="deps\phnt\nttp.h" />
+    <ClInclude Include="deps\phnt\ntwow64.h" />
+    <ClInclude Include="deps\phnt\ntxcapi.h" />
+    <ClInclude Include="deps\phnt\ntzwapi.h" />
+    <ClInclude Include="deps\phnt\phnt.h" />
+    <ClInclude Include="deps\phnt\phnt_ntdef.h" />
+    <ClInclude Include="deps\phnt\phnt_windows.h" />
+    <ClInclude Include="deps\phnt\subprocesstag.h" />
+    <ClInclude Include="deps\phnt\winsta.h" />
+    <ClInclude Include="utils\driver.h" />
+    <ClInclude Include="utils\hash.h" />
+    <ClInclude Include="utils\pe.h" />
+    <ClInclude Include="utils\syscalls.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
